@@ -15,6 +15,14 @@
             box-shadow: 0px 0px 6px 0px grey;
         }
 
+        .token {
+            background: aliceblue;
+            padding: 4px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            box-shadow: 0px 0px 6px 0px grey;
+        }
+
         body {
             background: #FEFEFE;
             font-family: Roboto, sans-serif;
@@ -31,6 +39,10 @@
 <body>
     <div>
         <h1 class="title">Postais enviados:</h1>
+        <p>
+            <b>Distância total viajada: </b><span class="token">{{ total_distance }} km</span>
+            <b>Tempo total: </b><span class="token">{{ total_days }} dias</span>
+        </p>
         {% if postcards %}
             {% for postcard in postcards %}
                 <p class="card">
