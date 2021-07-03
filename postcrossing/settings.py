@@ -25,7 +25,7 @@ SECRET_KEY = '#x_d74&7q@u5s0b95w+qxham%*jf&lm1l8u6h%w8pyw+bvs83_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['postcrossing-dashboard.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'postcrossing-dashboard.herokuapp.com']
 
 
 # Application definition
