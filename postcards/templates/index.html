@@ -34,9 +34,9 @@
         {% if postcards %}
             {% for postcard in postcards %}
                 <p class="card">
-                    <b>País de destino:</b> {{ postcard.country.name }}<br />
-                    <b>Data de envio:</b> {{ postcard.sent }}<br />
-                    <b>Data de chegada:</b>{{ postcard.received }}<br />
+                    <b>País de destino: </b>{{ postcard.country.name }}<br />
+                    <b>Data de envio: </b>{{ postcard.sent|date:"d/m/Y" }}<br />
+                    <b>Data de chegada: </b>{{ postcard.received|date:"d/m/Y" }}<br />
                     <b>Tempo de viagem: </b>{{ postcard.time_travel }} dias<br />
                     <b>Distância percorrida: </b>{{ postcard.distance }} km<br />
                     <b>km/dia: </b>{{ postcard.avg }}
