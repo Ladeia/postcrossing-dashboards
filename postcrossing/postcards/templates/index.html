@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My postcards</title>
+</head>
+<body>
+    <div>
+        <h1>Postais enviados:</h1>
+        {% if postcards %}
+            {% for postcard in postcards %}
+                <p>
+                    <b>País de destino:</b> {{ postcard.country.name }}<br />
+                    <b>Data de envio:</b> {{ postcard.sent }}<br />
+                    <b>Data de chegada:</b>{{ postcard.received }}<br />
+                    <b>Tempo de viagem: </b>{{ postcard.time_travel }} dias<br />
+                    <b>Distância percorrida: </b>{{ postcard.distance }} km
+                </p>
+
+                <hr />
+            {% endfor %}
+        {% else %}
+            <h2>Não há postais para exibir</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
