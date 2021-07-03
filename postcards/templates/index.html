@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>My postcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            background: aliceblue;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            box-shadow: 0px 0px 6px 0px grey;
+        }
+
+        body {
+            background: #FEFEFE;
+            font-family: Roboto, sans-serif;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1>Postais enviados:</h1>
+        <h1 class="title">Postais enviados:</h1>
         {% if postcards %}
             {% for postcard in postcards %}
-                <p>
+                <p class="card">
                     <b>País de destino:</b> {{ postcard.country.name }}<br />
                     <b>Data de envio:</b> {{ postcard.sent }}<br />
                     <b>Data de chegada:</b>{{ postcard.received }}<br />
