@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='postcard',
             name='time_travel',
-            field=models.CharField(default=django.utils.timezone.now, max_length=4),
+            field=models.CharField(default=django.utils.timezone.now, max_length=40),
             preserve_default=False,
         ),
     ]
