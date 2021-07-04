@@ -39,10 +39,15 @@
 <body>
     <div>
         <h1 class="title">Postais enviados:</h1>
-        <p>
-            <b>Distância total viajada: </b><span class="token">{{ total_distance }} km</span>
-            <b>Tempo total: </b><span class="token">{{ total_days }} dias</span>
+
+        <p class="card">
+            <b>Distância total viajada: </b>{{ total_distance }} km<br />
+            <b>Tempo total: </b>{{ total_days }} dias<br />
+            <b>km/dia total: </b>{{ avg_total|floatformat:2 }}<br />
+            <b>Média de dias: </b>{{ avg_time|floatformat:2 }}<br />
+            <b>Média de distância: </b>{{ avg_distance|floatformat:2 }} km<br />
         </p>
+
         {% if postcards %}
             {% for postcard in postcards %}
                 <p class="card">
@@ -51,7 +56,7 @@
                     <b>Data de chegada: </b>{{ postcard.received|date:"d/m/Y" }}<br />
                     <b>Tempo de viagem: </b>{{ postcard.time_travel }} dias<br />
                     <b>Distância percorrida: </b>{{ postcard.distance }} km<br />
-                    <b>km/dia: </b>{{ postcard.avg }}
+                    <b>km/dia: </b>{{ postcard.avg|floatformat:2 }}
                 </p>
 
                 <hr />
