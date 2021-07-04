@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='postcard',
             name='distance',
-            field=models.CharField(default=django.utils.timezone.now, max_length=20),
+            field=models.CharField(default=django.utils.timezone.now, max_length=40),
             preserve_default=False,
         ),
         migrations.AddField(
